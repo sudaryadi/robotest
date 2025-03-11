@@ -1,73 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.8 on win32)" generated="2025-03-10T15:42:58.460555" rpa="false" schemaversion="5">
-<suite id="s1" name="Login" source="C:\Users\sudar\PycharmProjects\robotest\Testcases\login.robot">
-<test id="s1-t1" name="Login to ParaBank" line="10">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-03-10T15:42:58.653548" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021FCE73AA20&gt;</msg>
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
-<arg>sys, selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-03-10T15:42:58.653548" elapsed="0.000000"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--start-maximized</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-10T15:42:58.653548" elapsed="0.000000"/>
-</kw>
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-03-10T15:42:58.653548" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-03-10T15:42:58.653548" elapsed="1.342922"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-03-10T15:42:59.996470" level="INFO">Opening url 'https://parabank.parasoft.com/'</msg>
+<robot generator="Robot 7.2.2 (Python 3.12.8 on win32)" generated="2025-03-11T14:49:17.899942" rpa="false" schemaversion="5">
+<suite id="s1" name="Openaccount" source="C:\Users\sudar\PycharmProjects\robotest\Testcases\openaccount.robot">
+<test id="s1-t1" name="Open New Account" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:18.227506" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/'.</msg>
 <arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-03-10T15:42:59.996470" elapsed="2.258932"/>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-11T14:49:18.227506" elapsed="4.795311"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-11T14:49:23.024806" elapsed="0.065208"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:23.091373" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[1]/h2' contains exact text 'Customer Login'.</msg>
+<arg>${customer_txt}</arg>
+<arg>Customer Login</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-11T14:49:23.091020" elapsed="0.069278"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-10T15:43:02.257170" level="INFO">Typing text 'siva.aurum' into text field 'name=username'.</msg>
-<arg>name=username</arg>
+<msg time="2025-03-11T14:49:23.161342" level="INFO">Typing text 'siva.aurum' into text field 'name=username'.</msg>
+<arg>${username}</arg>
 <arg>siva.aurum</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-10T15:43:02.256037" elapsed="0.111835"/>
+<status status="PASS" start="2025-03-11T14:49:23.161342" elapsed="0.124360"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-10T15:43:02.369105" level="INFO">Typing text 'Siva123_' into text field 'name=password'.</msg>
-<arg>name=password</arg>
+<msg time="2025-03-11T14:49:23.286983" level="INFO">Typing text 'Siva123_' into text field 'name=password'.</msg>
+<arg>${password}</arg>
 <arg>Siva123_</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-10T15:43:02.369105" elapsed="0.087570"/>
+<status status="PASS" start="2025-03-11T14:49:23.286983" elapsed="0.083614"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-10T15:43:02.457676" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/div[1]/div/form/div[3]/input'.</msg>
-<arg>xpath=/html/body/div[1]/div[3]/div[1]/div/form/div[3]/input</arg>
+<msg time="2025-03-11T14:49:23.370597" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/div[1]/div/form/div[3]/input'.</msg>
+<arg>${login_btn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-10T15:43:02.457676" elapsed="1.070096"/>
+<status status="PASS" start="2025-03-11T14:49:23.370597" elapsed="0.063994"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//h1[contains(text(),'Accounts Overview')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-10T15:43:03.528803" elapsed="0.156962"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-11T14:49:26.434648" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-11T14:49:23.434591" elapsed="3.000057"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-03-10T15:43:03.801549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-03-10T15:43:03.685765" elapsed="0.115784"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:26.434648" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/h1' contains exact text 'Accounts Overview'.</msg>
+<arg>${acc_overview}</arg>
+<arg>Accounts Overview</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-11T14:49:26.434648" elapsed="0.021244"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:26.455892" level="INFO">Clicking link 'openaccount.htm'.</msg>
+<arg>${open_account}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:26.455892" elapsed="0.521335"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-11T14:49:29.977390" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-11T14:49:26.977227" elapsed="3.000163"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:29.977390" level="INFO">Selecting options from selection list 'id=type' by value 1.</msg>
+<arg>${acc_drop}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-11T14:49:29.977390" elapsed="0.075926"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:30.053316" level="INFO">Selecting options from selection list 'id=fromAccountId' by value 14121.</msg>
+<arg>${deposit}</arg>
+<arg>14121</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-03-11T14:49:30.053316" elapsed="0.085614"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:30.138930" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/form/div/input'.</msg>
+<arg>${open_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-11T14:49:30.138930" elapsed="0.085340"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-11T14:49:33.226188" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-11T14:49:30.225903" elapsed="3.000285"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-11T14:49:33.226188" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[2]/p[1]' contains exact text 'Congratulations, your account is now open.'.</msg>
+<arg>${open_success}</arg>
+<arg>Congratulations, your account is now open.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-11T14:49:33.226188" elapsed="0.027543"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-10T15:43:03.802655" elapsed="2.259999"/>
+<status status="PASS" start="2025-03-11T14:49:33.253731" elapsed="2.225470"/>
 </kw>
-<status status="PASS" start="2025-03-10T15:42:58.653548" elapsed="7.409106"/>
+<status status="PASS" start="2025-03-11T14:49:18.227506" elapsed="17.251695"/>
 </test>
-<status status="PASS" start="2025-03-10T15:42:58.463725" elapsed="7.598929"/>
+<status status="PASS" start="2025-03-11T14:49:17.899942" elapsed="17.584764"/>
 </suite>
 <statistics>
 <total>
@@ -76,7 +113,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+<stat name="Openaccount" id="s1" pass="1" fail="0" skip="0">Openaccount</stat>
 </suite>
 </statistics>
 <errors>
