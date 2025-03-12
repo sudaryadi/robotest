@@ -1,119 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.8 on win32)" generated="2025-03-11T14:49:17.899942" rpa="false" schemaversion="5">
-<suite id="s1" name="Openaccount" source="C:\Users\sudar\PycharmProjects\robotest\Testcases\openaccount.robot">
-<test id="s1-t1" name="Open New Account" line="20">
+<robot generator="Robot 7.2.2 (Python 3.12.8 on win32)" generated="2025-03-12T10:03:56.248716" rpa="false" schemaversion="5">
+<suite id="s1" name="Transferfunds" source="C:\Users\sudar\PycharmProjects\robotest\Testcases\transferfunds.robot">
+<test id="s1-t1" name="TC#4_Transfer funds between two accounts" line="20">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:18.227506" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/'.</msg>
+<msg time="2025-03-12T10:03:56.466717" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-11T14:49:18.227506" elapsed="4.795311"/>
+<status status="PASS" start="2025-03-12T10:03:56.466717" elapsed="3.881431"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-11T14:49:23.024806" elapsed="0.065208"/>
+<status status="PASS" start="2025-03-12T10:04:00.350190" elapsed="0.059357"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:23.091373" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[1]/h2' contains exact text 'Customer Login'.</msg>
+<msg time="2025-03-12T10:04:00.412547" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[1]/h2' contains exact text 'Customer Login'.</msg>
 <arg>${customer_txt}</arg>
 <arg>Customer Login</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-11T14:49:23.091020" elapsed="0.069278"/>
+<status status="PASS" start="2025-03-12T10:04:00.411547" elapsed="0.049324"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:23.161342" level="INFO">Typing text 'siva.aurum' into text field 'name=username'.</msg>
+<msg time="2025-03-12T10:04:00.461806" level="INFO">Typing text 'siva.aurum' into text field 'name=username'.</msg>
 <arg>${username}</arg>
 <arg>siva.aurum</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-11T14:49:23.161342" elapsed="0.124360"/>
+<status status="PASS" start="2025-03-12T10:04:00.460871" elapsed="0.115850"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:23.286983" level="INFO">Typing text 'Siva123_' into text field 'name=password'.</msg>
+<msg time="2025-03-12T10:04:00.576721" level="INFO">Typing text 'Siva123_' into text field 'name=password'.</msg>
 <arg>${password}</arg>
 <arg>Siva123_</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-11T14:49:23.286983" elapsed="0.083614"/>
+<status status="PASS" start="2025-03-12T10:04:00.576721" elapsed="0.110022"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:23.370597" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/div[1]/div/form/div[3]/input'.</msg>
+<msg time="2025-03-12T10:04:00.688135" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/div[1]/div/form/div[3]/input'.</msg>
 <arg>${login_btn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-11T14:49:23.370597" elapsed="0.063994"/>
+<status status="PASS" start="2025-03-12T10:04:00.688135" elapsed="1.167638"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-11T14:49:26.434648" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-03-12T10:04:04.856815" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-11T14:49:23.434591" elapsed="3.000057"/>
+<status status="PASS" start="2025-03-12T10:04:01.856289" elapsed="3.000526"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:26.434648" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/h1' contains exact text 'Accounts Overview'.</msg>
+<msg time="2025-03-12T10:04:04.856815" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/h1' contains exact text 'Accounts Overview'.</msg>
 <arg>${acc_overview}</arg>
 <arg>Accounts Overview</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-11T14:49:26.434648" elapsed="0.021244"/>
+<status status="PASS" start="2025-03-12T10:04:04.856815" elapsed="0.022801"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-12T10:04:06.880345" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-12T10:04:04.879616" elapsed="2.000729"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:26.455892" level="INFO">Clicking link 'openaccount.htm'.</msg>
-<arg>${open_account}</arg>
+<msg time="2025-03-12T10:04:06.880345" level="INFO">Clicking link 'transfer.htm'.</msg>
+<arg>${transfer}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-11T14:49:26.455892" elapsed="0.521335"/>
+<status status="PASS" start="2025-03-12T10:04:06.880345" elapsed="0.489346"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-11T14:49:29.977390" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-03-12T10:04:09.370959" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-11T14:49:26.977227" elapsed="3.000163"/>
+<status status="PASS" start="2025-03-12T10:04:07.370585" elapsed="2.000374"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-12T10:04:09.370959" level="INFO">Typing text '1000' into text field 'id=amount'.</msg>
+<arg>${amount}</arg>
+<arg>1000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-12T10:04:09.370959" elapsed="0.118974"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:29.977390" level="INFO">Selecting options from selection list 'id=type' by value 1.</msg>
-<arg>${acc_drop}</arg>
-<arg>1</arg>
+<msg time="2025-03-12T10:04:09.489933" level="INFO">Selecting options from selection list 'id=fromAccountId' by value 14565.</msg>
+<msg time="2025-03-12T10:04:09.660457" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-12T10:04:09.660457" level="FAIL">NoSuchElementException: Message: Cannot locate option with value: 14565; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</msg>
+<arg>${from_acc}</arg>
+<arg>14565</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-03-11T14:49:29.977390" elapsed="0.075926"/>
+<status status="FAIL" start="2025-03-12T10:04:09.489933" elapsed="0.172493">NoSuchElementException: Message: Cannot locate option with value: 14565; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:30.053316" level="INFO">Selecting options from selection list 'id=fromAccountId' by value 14121.</msg>
-<arg>${deposit}</arg>
-<arg>14121</arg>
+<arg>${to_acc}</arg>
+<arg>14787</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-03-11T14:49:30.053316" elapsed="0.085614"/>
+<status status="NOT RUN" start="2025-03-12T10:04:09.663424" elapsed="0.000000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:30.138930" level="INFO">Clicking button 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[1]/form/div/input'.</msg>
-<arg>${open_btn}</arg>
+<arg>${transfer_btn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-11T14:49:30.138930" elapsed="0.085340"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-11T14:49:33.226188" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-11T14:49:30.225903" elapsed="3.000285"/>
+<status status="NOT RUN" start="2025-03-12T10:04:09.663424" elapsed="0.000000"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-11T14:49:33.226188" level="INFO">Verifying element 'xpath=/html/body/div[1]/div[3]/div[2]/div/div[2]/p[1]' contains exact text 'Congratulations, your account is now open.'.</msg>
-<arg>${open_success}</arg>
-<arg>Congratulations, your account is now open.</arg>
+<arg>${complete}</arg>
+<arg>Transfer Complete!</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-11T14:49:33.226188" elapsed="0.027543"/>
+<status status="NOT RUN" start="2025-03-12T10:04:09.663424" elapsed="0.000000"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-11T14:49:33.253731" elapsed="2.225470"/>
-</kw>
-<status status="PASS" start="2025-03-11T14:49:18.227506" elapsed="17.251695"/>
+<status status="FAIL" start="2025-03-12T10:03:56.465659" elapsed="13.198765">NoSuchElementException: Message: Cannot locate option with value: 14565; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
 </test>
-<status status="PASS" start="2025-03-11T14:49:17.899942" elapsed="17.584764"/>
+<status status="FAIL" start="2025-03-12T10:03:56.248716" elapsed="13.417216"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Openaccount" id="s1" pass="1" fail="0" skip="0">Openaccount</stat>
+<stat name="Transferfunds" id="s1" pass="0" fail="1" skip="0">Transferfunds</stat>
 </suite>
 </statistics>
 <errors>
